@@ -21,6 +21,7 @@ header#header {
     padding: 25px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .header-topic:hover {
@@ -42,13 +43,34 @@ header#header {
 
 #intro {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.button{
+    margin: 0 1rem;
+    padding: 1rem;
+    width: 8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.button-2{
+    background-color: black;
+    color: white;
+}
+
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
 #greetings {
     text-align: center;
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 h1 > span {
@@ -114,6 +136,13 @@ h1 > span {
 
 .skill-container {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill-img{
     display: flex;
     justify-content: center;
     align-items: center;
