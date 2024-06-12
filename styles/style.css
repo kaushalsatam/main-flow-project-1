@@ -1,0 +1,274 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+header#header {
+    position: relative;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: #FED9B7;
+}
+
+.header-topic {
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.header-topic:hover {
+    background-color: #F07167; /* Change color on hover */
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.home {
+    height: fit-content;
+    width: 100%;
+    background-color: #FDFCDC;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#greetings {
+    text-align: center;
+    font-size: 7rem;
+}
+
+h1 > span {
+    background: linear-gradient(to right, #060045, #3700ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#profileBorder {
+    height: 610px;
+    width: 610px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    border: 10px solid white;
+    border-radius: 50%;
+    overflow: hidden; /* Ensure content does not overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myPicture {
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Ensures the image covers the div without stretching */
+}
+
+#myPicture:hover {
+    transform: scale(1.1);
+}
+
+#aboutPage {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+}
+
+#aboutPage img {
+    width: 100%;
+    max-width: 610px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#skillsPage {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+}
+
+.skills .image {
+    width: 100%;
+    max-width: 610px;
+}
+
+.skill-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skill {
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+}
+
+#contactPage {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-fields {
+    width: 50%;
+    height: 50px;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: medium;
+    padding-left: 20px;
+    margin: 10px 10px;
+}
+
+.btn {
+    margin: 20px 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+footer {
+    height: 400px;
+    background: linear-gradient(to right, #3700ff, rgb(145, 135, 255));
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+}
+
+footer div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cyan;
+}
+
+.social-media ul {
+    list-style: none;
+}
+
+.social-media ul > li {
+    padding: 10px;
+    font-size: medium;
+}
+
+a {
+    color: cyan;
+    font-size: 30px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+    .home {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #profileBorder {
+        height: 500px;
+        width: 500px;
+        margin: auto;
+    }
+
+    #greetings {
+        font-size: 5rem;
+    }
+
+    #aboutPage {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #skillsPage {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #contactPage {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        text-align: center;
+    }
+
+    .social-media {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #profileBorder {
+        height: 400px;
+        width: 400px;
+    }
+
+    #greetings {
+        font-size: 4rem;
+    }
+
+    .input-fields {
+        width: 80%;
+    }
+
+    .header-topic {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #profileBorder {
+        height: 300px;
+        width: 300px;
+    }
+
+    #greetings {
+        font-size: 3rem;
+    }
+
+    .input-fields {
+        width: 90%;
+    }
+
+    .header-topic {
+        padding: 10px;
+    }
+}
